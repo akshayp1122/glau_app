@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glaube_app/photolist_page.dart';
 import 'home_page.dart';
 
 class MainScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _pages = const [
     HomePage(),
-    Center(child: Text("List Page", style: TextStyle(color: Colors.white))),
+    PhotoListPage(),
     Center(child: Text("Country Page", style: TextStyle(color: Colors.white))),
     Center(child: Text("Settings Page", style: TextStyle(color: Colors.white))),
   ];
