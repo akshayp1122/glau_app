@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glaube_app/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -9,6 +10,27 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool _obscurePassword = true;
+   final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  void _login() {
+    const defaultEmail = "admin@gmail.com";
+    const defaultPassword = "123456478";
+
+    if (_emailController.text.trim() == defaultEmail &&
+        _passwordController.text.trim() == defaultPassword) {
+    
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const HomePage()),
+      );
+    } else {
+     
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Invalid email or password")),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +65,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 8),
               TextField(
+                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
                     border: InputBorder.none,
@@ -59,6 +82,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 8),
               TextField(
+                 controller: _passwordController,
                 obscureText: _obscurePassword,
                 decoration: InputDecoration(
                     border: InputBorder.none,
@@ -101,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: _login,
                   child: const Text(
                     "Login",
                     style: TextStyle(
