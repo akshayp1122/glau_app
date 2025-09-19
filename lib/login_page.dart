@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: const Color(0xFFF8F9FA),
+       backgroundColor: const Color(0xFF1E1F22),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
@@ -44,14 +44,14 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               IconButton(
-                icon: const Icon(Icons.arrow_back),
+                icon: const Icon(Icons.arrow_back,color: Colors.white,),
                 onPressed: () {},
               ),
               const SizedBox(height: 20),
               Center(
                 child: const Text(
                   "Welcome Back👋",
-                  style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold,color: Colors.white),
                 ),
               ),
               const SizedBox(height: 6),
@@ -62,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 30),
               const Text(
                 "Your Email",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16,color: Colors.white),
               ),
               const SizedBox(height: 8),
               TextField(
@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 20),
               const Text(
                 "Password",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16,color: Colors.white),
               ),
               const SizedBox(height: 8),
               TextField(
@@ -191,6 +191,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       fontWeight: FontWeight.w500,
+                      color: Colors.deepPurpleAccent
                     ),
                   ),
                 ),
