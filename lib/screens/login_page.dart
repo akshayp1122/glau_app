@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:glaube_app/home_page.dart';
-import 'package:glaube_app/main_screen.dart';
+import 'package:glaube_app/screens/main_screen.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -15,22 +15,22 @@ class _LoginPageState extends State<LoginPage> {
   final _passwordController = TextEditingController();
 
   void _login() {
-    // const defaultEmail = "admin@gmail.com";
-    // const defaultPassword = "123456478";
+    const defaultEmail = "admin@gmail.com";
+    const defaultPassword = "123456478";
 
-    // if (_emailController.text.trim() == defaultEmail &&
-    //     _passwordController.text.trim() == defaultPassword) {
+    if (_emailController.text.trim() == defaultEmail &&
+        _passwordController.text.trim() == defaultPassword) {
     
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const MainScreen()),
       );
-    // } else {
+    } else {
      
-    //   ScaffoldMessenger.of(context).showSnackBar(
-    //     const SnackBar(content: Text("Invalid email or password")),
-    //   );
-    // }
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Invalid email or password")),
+      );
+    }
   }
 
   @override

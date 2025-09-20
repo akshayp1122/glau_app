@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:glaube_app/country_page.dart';
-import 'package:glaube_app/logout_page.dart';
-import 'package:glaube_app/photolist_page.dart';
+import 'package:glaube_app/screens/country_page.dart';
+import 'package:glaube_app/screens/logout_page.dart';
+import 'package:glaube_app/screens/photolist_page.dart';
 import 'home_page.dart';
 
 class MainScreen extends StatefulWidget {

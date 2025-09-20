@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glaube_app/blocs/photo_bloc/photo_bloc.dart';
 import 'package:glaube_app/repository/photo_repository.dart';
-import 'package:glaube_app/splash_screen.dart';
+import 'package:glaube_app/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'App',
+        title: 'gle App',
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           scaffoldBackgroundColor: Colors.white,
